@@ -27,3 +27,10 @@ web/data/
 bin/*
 /src/Web/AppBundle/Inc/
 /src/Web/AppBundle/Resources/public/js/Inc/
+/.idea/encodings.xml
+/bin/symfony_requirements
+/var/SymfonyRequirements.php
+/web/config.php
+/.idea/scopes/
+/.idea/workspace.xml
+
