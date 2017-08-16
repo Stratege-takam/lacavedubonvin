@@ -5,10 +5,13 @@ namespace Web\MainBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class DefaultController extends Controller
+/**
+ * @Route("/test")
+ */
+class TestController extends Controller
 {
     /**
-     * @Route("/", name="main_homepage", options={"expose"=true})
+     * @Route("/", name="test_homepage", options={"expose"=true})
      */
     public function indexAction()
     {
