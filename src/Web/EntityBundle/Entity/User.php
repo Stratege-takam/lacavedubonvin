@@ -3,15 +3,28 @@
 namespace Web\EntityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * User
  *
  * @ORM\Table(name="user")
+ * @UniqueEntity(fields="email", message="user.email.UniqueEntity")
+ * @UniqueEntity(fields="username", message="user.username.UniqueEntity")
+ * @ORM\InheritanceType("JOINED")
+ * @ORM\DiscriminatorColumn(name="discriminator", type="string")
+ * @ORM\DiscriminatorMap({"Entreprise" = "Entreprise", "Client" = "Client"})
  * @ORM\Entity(repositoryClass="Web\EntityBundle\Repository\UserRepository")
  */
-class User
+abstract class User  extends  BaseUser
 {
+
+    const ROLE_SUPER_ADMIN = 'ROLE_SUPER_ADMIN';
+    const ROLE_ADMIN = 'ROLE_ADMIN';
+    const ROLE_USER = 'ROLE_USER';
+
     /**
      * @var int
      *

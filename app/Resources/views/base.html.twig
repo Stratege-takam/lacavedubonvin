@@ -204,6 +204,8 @@
 
 {% block javascripts %}
     <!-- faciliter la manipulation du  controlleur dans le js  -->
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 
     <!-- jQuery 3.1 -->
     <script src="{{ asset('plugin/jQuery/jquery.js') }}"></script>
