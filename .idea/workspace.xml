@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d27cd2b-98a7-4d19-b546-ac07c99d2970" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lacavedubonvin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,8 +41,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git status" />
-      <command text="git push" />
       <command text="git pull" />
       <command text="git push" />
       <command text="git checkout" />
@@ -61,6 +59,13 @@
       <command text="git add .idea/scopes/scope_settings.xml" />
       <command text="git status" />
       <command text="git add .idea/workspace.xml" />
+      <command text="git rm --cached .idea/workspace.xml" />
+      <command text="git rm --cached .idea/scopes/scope_settings.xml" />
+      <command text="git rm --cached .idea/encodings.xml" />
+      <command text="git pull origin master" />
+      <command text="git add -A" />
+      <command text=".GIT/" />
+      <command text="git  commit   -m `tggg'" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
