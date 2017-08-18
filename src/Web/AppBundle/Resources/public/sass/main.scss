@@ -1,0 +1,22 @@
+$red : #950225;
+$pink : #E55689;
+$green: #C2D199;
+$yellow: #FAC200;
+$sky: #DFEAFC;
+$background: #EFEDE7;
+
+#title{
+  font-weight: bold;
+   color: $red;
+}
+
+.button{
+  background-color: $red;
+  color: white;
+}
+.button:hover{
+   background-color: $yellow;
+   color: white;
+    font-weight: bold;
+}
+
