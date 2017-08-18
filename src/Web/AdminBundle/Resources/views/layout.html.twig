@@ -1,33 +1,26 @@
 {% extends '::base.html.twig' %}
 
 {% block header %}
-    {% include 'AdminBundle:Inc:nav.html.twig' %}
+    {# include header here #}
 {% endblock %}
-{% block stylesheets %}
-    {{ parent() }}
-    <style>
 
-    </style>
-{% endblock %}
 
 {% block content %}
-    <div class="container">
-        {% block main %}
-
+    <div id="content">
+        {% block mainLg %}
+            {# it's conatiner large page #}
         {% endblock %}
-    </div>
+        <div class="container">
+            {% block main %}
 
+                {# it's conatiner page #}
+            {% endblock %}
+        </div>
+    </div>
 {% endblock %}
+
+
 
 {% block footer %}
-    {% include 'MainBundle:Inc:footer.html.twig' %}
-{% endblock %}
 
-{% block myjs %}
-
-    <script>
-        $(function(){
-            $(".button-collapse").sideNav();
-        })
-    </script>
 {% endblock %}

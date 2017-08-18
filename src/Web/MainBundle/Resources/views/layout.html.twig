@@ -1,7 +1,10 @@
 {% extends '::base.html.twig' %}
 
 {% block header %}
-   {# include header here #}
+    <div data-bundle="main" data-page="main" id="MainNav">
+        {% include 'MainBundle:Inc:nav.html.twig' %}
+        {% include 'MainBundle:Inc:carousel.html.twig' %}
+    </div>
 {% endblock %}
 
 
@@ -12,7 +15,6 @@
         {% endblock %}
         <div class="container">
             {% block main %}
-
                 {# it's conatiner page #}
             {% endblock %}
         </div>

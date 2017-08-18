@@ -16,9 +16,8 @@ var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 
 var jsPaths = [
-    './web/bundles/app/js/Inc/*.js',
+    './web/bundles/app/js/*.js',
     './web/bundles/main/js/*.js',
-    './web/bundles/main/js/sub/*.js',
     './web/bundles/admin/js/*.js'
 ];
 
@@ -235,7 +234,7 @@ gulp.task('watchprod', function ()
         .on('change', function(event){
             console.log('File '+event.path+' has been '+event.type);
 
-            currentTask = 'jsdev';
+            currentTask = 'jsprod';
         });
 });
 
@@ -256,6 +255,6 @@ gulp.task('watch', function ()
         .on('change', function(event){
             console.log('File '+event.path+'dev has been  '+event.type);
 
-            currentTask = 'jsdev';
+            currentTask = 'js';
         });
 });

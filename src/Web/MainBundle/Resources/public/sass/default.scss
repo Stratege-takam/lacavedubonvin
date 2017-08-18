@@ -1,0 +1,19 @@
+#minheigh{
+  height: 100%;
+  width: 100%;
+}
+
+html{
+  @extend #minheigh;
+  font-family: Roboto,Helvetica,Arial,'sans-serif';
+  body{
+    @extend #minheigh;
+    overflow-x: hidden;
+    #content{
+      @extend #minheigh;
+      background-color: $background;
+      .container{
+      }
+    }
+  }
+}

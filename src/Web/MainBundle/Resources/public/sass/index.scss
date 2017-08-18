@@ -1,0 +1,27 @@
+#MainIndex{
+  #MainCategory{
+    margin-top: 3em;
+    h3{
+      @extend  #title;
+    }
+    .category-item{
+      margin-top: 2% !important;
+      img{
+        height: 200px;
+      }
+    }
+  }
+  #MainShop{
+    h3{
+      @extend  #title;
+    }
+    margin-top: 3em;
+    .shop-item{
+      margin-top: 2% !important;
+      img{
+        height: 250px;
+        max-width: 100%;
+      }
+    }
+  }
+}
