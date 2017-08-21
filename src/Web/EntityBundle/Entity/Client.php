@@ -19,7 +19,7 @@ class Client extends User
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -94,4 +94,3 @@ class Client extends User
         return $this->lastname;
     }
 }
-

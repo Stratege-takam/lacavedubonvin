@@ -125,4 +125,3 @@ class History
         return $this->price;
     }
 }
-

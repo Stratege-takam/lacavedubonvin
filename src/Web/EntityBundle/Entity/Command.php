@@ -156,4 +156,3 @@ class Command
         return $this->state;
     }
 }
-
