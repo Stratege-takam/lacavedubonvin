@@ -22,6 +22,21 @@ class Command
     private $id;
 
     /**
+     * @var Client
+     * @ORM\ManyToOne(targetEntity="EntityBundle\Entity\Client",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
+     */
+    protected $client;
+
+    /**
+     * @var Enterprise
+     * @ORM\ManyToOne(targetEntity="EntityBundle\Entity\Enterprise",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
+     */
+    protected $enterprise;
+
+
+    /**
      * @var string
      *
      * @ORM\Column(name="number", type="string", length=255)
@@ -154,5 +169,53 @@ class Command
     public function getState()
     {
         return $this->state;
+    }
+
+    /**
+     * Set client
+     *
+     * @param \EntityBundle\Entity\Client $client
+     *
+     * @return Command
+     */
+    public function setClient(\EntityBundle\Entity\Client $client)
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * Get client
+     *
+     * @return \EntityBundle\Entity\Client
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * Set enterprise
+     *
+     * @param \EntityBundle\Entity\Enterprise $enterprise
+     *
+     * @return Command
+     */
+    public function setEnterprise(\EntityBundle\Entity\Enterprise $enterprise)
+    {
+        $this->enterprise = $enterprise;
+
+        return $this;
+    }
+
+    /**
+     * Get enterprise
+     *
+     * @return \EntityBundle\Entity\Enterprise
+     */
+    public function getEnterprise()
+    {
+        return $this->enterprise;
     }
 }

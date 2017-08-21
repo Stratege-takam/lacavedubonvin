@@ -22,6 +22,20 @@ class Basket
     private $id;
 
     /**
+     * @var Command
+     * @ORM\ManyToOne(targetEntity="EntityBundle\Entity\Command",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
+     */
+    private $command;
+
+    /**
+     * @var Drink
+     * @ORM\ManyToOne(targetEntity="EntityBundle\Entity\Drink",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
+     */
+    private $drink;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="quantity", type="integer")
@@ -93,4 +107,5 @@ class Basket
     {
         return $this->price;
     }
+
 }

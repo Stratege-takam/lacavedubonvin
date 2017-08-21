@@ -5,12 +5,12 @@ namespace Web\EntityBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Categorie
+ * Category
  *
- * @ORM\Table(name="categorie")
- * @ORM\Entity(repositoryClass="Web\EntityBundle\Repository\CategorieRepository")
+ * @ORM\Table(name="category")
+ * @ORM\Entity(repositoryClass="Web\EntityBundle\Repository\CategoryRepository")
  */
-class Categorie
+class Category
 {
     /**
      * @var int
@@ -65,7 +65,7 @@ class Categorie
      *
      * @param string $name
      *
-     * @return Categorie
+     * @return Category
      */
     public function setName($name)
     {
@@ -89,7 +89,7 @@ class Categorie
      *
      * @param string $description
      *
-     * @return Categorie
+     * @return Category
      */
     public function setDescription($description)
     {
@@ -113,7 +113,7 @@ class Categorie
      *
      * @param string $photo
      *
-     * @return Categorie
+     * @return Category
      */
     public function setPhoto($photo)
     {
@@ -137,7 +137,7 @@ class Categorie
      *
      * @param string $hashname
      *
-     * @return Categorie
+     * @return Category
      */
     public function setHashname($hashname)
     {

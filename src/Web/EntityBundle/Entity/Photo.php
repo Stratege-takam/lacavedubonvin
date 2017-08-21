@@ -22,6 +22,13 @@ class Photo
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Photo", inversedBy="photos")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $drink;
+
+
+    /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
@@ -154,5 +161,29 @@ class Photo
     public function getSize()
     {
         return $this->size;
+    }
+
+    /**
+     * Set drink
+     *
+     * @param \Web\EntityBundle\Entity\Photo $drink
+     *
+     * @return Photo
+     */
+    public function setDrink(\Web\EntityBundle\Entity\Photo $drink)
+    {
+        $this->drink = $drink;
+
+        return $this;
+    }
+
+    /**
+     * Get drink
+     *
+     * @return \Web\EntityBundle\Entity\Photo
+     */
+    public function getDrink()
+    {
+        return $this->drink;
     }
 }

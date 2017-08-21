@@ -21,6 +21,25 @@ class Save
      */
     private $id;
 
+
+    /**
+     * @var Client
+     * @ORM\ManyToOne(targetEntity="EntityBundle\Entity\Client",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
+     */
+    protected $client;
+
+    /**
+     * @var Enterprise
+     * @ORM\ManyToOne(targetEntity="EntityBundle\Entity\Enterprise",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
+     */
+    protected $enterprise;
+
+
+
+
+
     /**
      * @var \DateTime
      *
@@ -61,5 +80,53 @@ class Save
     public function getCreateDate()
     {
         return $this->createDate;
+    }
+
+    /**
+     * Set client
+     *
+     * @param \EntityBundle\Entity\Client $client
+     *
+     * @return Save
+     */
+    public function setClient(\EntityBundle\Entity\Client $client)
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * Get client
+     *
+     * @return \EntityBundle\Entity\Client
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * Set enterprise
+     *
+     * @param \EntityBundle\Entity\Enterprise $enterprise
+     *
+     * @return Save
+     */
+    public function setEnterprise(\EntityBundle\Entity\Enterprise $enterprise)
+    {
+        $this->enterprise = $enterprise;
+
+        return $this;
+    }
+
+    /**
+     * Get enterprise
+     *
+     * @return \EntityBundle\Entity\Enterprise
+     */
+    public function getEnterprise()
+    {
+        return $this->enterprise;
     }
 }
