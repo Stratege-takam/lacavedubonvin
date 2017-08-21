@@ -24,4 +24,17 @@
       }
     }
   }
+  #MainDrink{
+    h3{
+      @extend  #title;
+    }
+    margin-top: 3em;
+    .drink-item{
+      margin-top: 2% !important;
+      img{
+        height: 250px;
+        max-width: 100%;
+      }
+    }
+  }
 }

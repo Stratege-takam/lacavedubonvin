@@ -25,4 +25,12 @@ class RenderController extends Controller
     {
         return $this->render('MainBundle:Render:shop.html.twig');
     }
+
+    /**
+     * @Route("/drink/first", name="drink_first_homepage", options={"expose"=true})
+     */
+    public function drinkFirstAction()
+    {
+        return $this->render('MainBundle:Render:drinkFirst.html.twig');
+    }
 }
