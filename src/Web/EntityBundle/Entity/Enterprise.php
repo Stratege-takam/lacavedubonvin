@@ -19,21 +19,9 @@ class Enterprise extends User
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="enterprise", type="string", length=255, nullable=true, unique=true)
-     */
-    private $enterprise;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255, nullable=true, unique=true)
-     */
-    private $name;
 
     /**
      * @var string
@@ -84,6 +72,19 @@ class Enterprise extends User
      */
     private $logo;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="presentation", type="text", nullable=true)
+     */
+    private $presentation;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="compter", type="integer",nullable=true)
+     */
+    private $compter;
 
     /**
      * Get id
@@ -95,53 +96,6 @@ class Enterprise extends User
         return $this->id;
     }
 
-    /**
-     * Set enterprise
-     *
-     * @param string $enterprise
-     *
-     * @return Enterprise
-     */
-    public function setEnterprise($enterprise)
-    {
-        $this->enterprise = $enterprise;
-
-        return $this;
-    }
-
-    /**
-     * Get enterprise
-     *
-     * @return string
-     */
-    public function getEnterprise()
-    {
-        return $this->enterprise;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return Enterprise
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
 
     /**
      * Set chiffreAffaire
@@ -310,5 +264,52 @@ class Enterprise extends User
     {
         return $this->logo;
     }
-}
 
+    /**
+     * Set presentation
+     *
+     * @param string $presentation
+     *
+     * @return Enterprise
+     */
+    public function setPresentation($presentation)
+    {
+        $this->presentation = $presentation;
+
+        return $this;
+    }
+
+    /**
+     * Get presentation
+     *
+     * @return string
+     */
+    public function getPresentation()
+    {
+        return $this->presentation;
+    }
+
+    /**
+     * Set compter
+     *
+     * @param integer $compter
+     *
+     * @return Enterprise
+     */
+    public function setCompter($compter)
+    {
+        $this->compter = $compter;
+
+        return $this;
+    }
+
+    /**
+     * Get compter
+     *
+     * @return integer
+     */
+    public function getCompter()
+    {
+        return $this->compter;
+    }
+}

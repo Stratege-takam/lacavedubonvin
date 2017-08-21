@@ -15,7 +15,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @UniqueEntity(fields="username", message="user.username.UniqueEntity")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="discriminator", type="string")
- * @ORM\DiscriminatorMap({"Entreprise" = "Entreprise", "Client" = "Client"})
+ * @ORM\DiscriminatorMap({"Enterprise" = "Enterprise", "Client" = "Client"})
  * @ORM\Entity(repositoryClass="Web\EntityBundle\Repository\UserRepository")
  */
 abstract class User  extends  BaseUser
@@ -25,6 +25,7 @@ abstract class User  extends  BaseUser
     const ROLE_ADMIN = 'ROLE_ADMIN';
     const ROLE_USER = 'ROLE_USER';
 
+
     /**
      * @var int
      *
@@ -32,7 +33,14 @@ abstract class User  extends  BaseUser
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, nullable=true, unique=true)
+     */
+    private $name;
 
     /**
      * @var array
@@ -168,5 +176,28 @@ abstract class User  extends  BaseUser
     {
         return $this->city;
     }
-}
 
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return User
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+}

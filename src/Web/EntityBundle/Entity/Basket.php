@@ -94,4 +94,3 @@ class Basket
         return $this->price;
     }
 }
-
