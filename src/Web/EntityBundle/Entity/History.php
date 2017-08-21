@@ -22,6 +22,20 @@ class History
     private $id;
 
     /**
+     * @var Drink
+     * @ORM\ManyToOne(targetEntity="EntityBundle\Entity\Drink",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
+     */
+    protected $drink;
+
+    /**
+     * @var Enterprise
+     * @ORM\ManyToOne(targetEntity="EntityBundle\Entity\Enterprise",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
+     */
+    protected $enterprise;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="createDate", type="date")
@@ -123,5 +137,53 @@ class History
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * Set drink
+     *
+     * @param \EntityBundle\Entity\Drink $drink
+     *
+     * @return History
+     */
+    public function setDrink(\EntityBundle\Entity\Drink $drink)
+    {
+        $this->drink = $drink;
+
+        return $this;
+    }
+
+    /**
+     * Get drink
+     *
+     * @return \EntityBundle\Entity\Drink
+     */
+    public function getDrink()
+    {
+        return $this->drink;
+    }
+
+    /**
+     * Set enterprise
+     *
+     * @param \EntityBundle\Entity\Enterprise $enterprise
+     *
+     * @return History
+     */
+    public function setEnterprise(\EntityBundle\Entity\Enterprise $enterprise)
+    {
+        $this->enterprise = $enterprise;
+
+        return $this;
+    }
+
+    /**
+     * Get enterprise
+     *
+     * @return \EntityBundle\Entity\Enterprise
+     */
+    public function getEnterprise()
+    {
+        return $this->enterprise;
     }
 }
