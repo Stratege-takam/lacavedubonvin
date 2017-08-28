@@ -33,4 +33,13 @@ class RenderController extends Controller
     {
         return $this->render('MainBundle:Render:drinkFirst.html.twig');
     }
+
+    /**
+     * @Route("/drink/list", name="drink_list", options={"expose"=true})
+     */
+    public function listAction()
+    {
+        return $this->render('MainBundle:Render:drinkList.html.twig');
+    }
 }
+

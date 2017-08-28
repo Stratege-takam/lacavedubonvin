@@ -2,60 +2,28 @@
    <h3>  {% trans from  'shop' %} ours {% endtrans %} </h3>
     <hr>
     <div class="row">
-        <div class="col col-md-4">
-            <div class="card shop-item">
-                <img class="card-img-top" src="{{ asset('dist/drink/bordeaux.jpg') }}" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title category</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn  button">{% trans from  'shop' %} visit {% endtrans %}</a>
-                    <span class="pull-right text-muted small fa fa-eye"> 510 </span>
-                </div>
+        {% for i in 1..12 %}
+            <div class="col-sm-12 col-md-6 ">
+                <section>
+                    <div class="container py-3">
+                        <div class="card shop-item">
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <img src="{{ asset('dist/drink/bordeaux.jpg') }}" class="w-100">
+                                </div>
+                                <div class="col-md-8 px-3">
+                                    <div class="card-block px-3">
+                                        <h4 class="card-title">{% trans from  'category' %} category.vins {% endtrans %}</h4>
+                                        <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                                        <a href="#" class="btn btn-primary button">{% trans from  'shop' %} visit {% endtrans %}</a>
+                                        <span class="pull-right text-muted small fa fa-eye"> 510 </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </div>
-        <div class="col  col-md-4">
-            <div class="card shop-item">
-                <img class="card-img-top" src="{{ asset('dist/drink/burgundy.jpg') }}" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title category </h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn  button">{% trans from  'shop' %} visit {% endtrans %}</a>
-                    <span class="pull-right text-muted small fa fa-eye"> 510 </span>
-                </div>
-            </div>
-        </div>
-        <div class="col  col-md-4">
-            <div class="card shop-item">
-                <img class="card-img-top" src="{{ asset('dist/drink/x1001.jpg') }}" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title category</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn  button">{% trans from  'shop' %} visit {% endtrans %}</a>
-                    <span class="pull-right text-muted small fa fa-eye"> 510 </span>
-                </div>
-            </div>
-        </div>
-        <div class="col  col-md-4">
-            <div class="card shop-item">
-                <img class="card-img-top" src="{{ asset('dist/drink/x1026.jpg') }}" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title category  </h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn  button">{% trans from  'shop' %} visit {% endtrans %}</a>
-                    <span class="pull-right text-muted small fa fa-eye"> 510 </span>
-                </div>
-            </div>
-        </div>
-        <div class="col  col-md-4">
-            <div class="card shop-item">
-                <img class="card-img-top" src="{{ asset('dist/drink/x1023.jpg') }}" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title category </h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn  button">{% trans from  'shop' %} visit {% endtrans %}</a>
-                    <span class="pull-right text-muted small fa fa-eye"> 510 </span>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
