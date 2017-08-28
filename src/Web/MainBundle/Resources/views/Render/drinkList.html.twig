@@ -1,15 +1,34 @@
 <div id="DrinkList">
+    <div class="row">
+        <div class="col-12">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Saisir le nom  d'une boisson">
+                <div class="input-group-btn">
+                    <button type="button" class="btn button">
+                        <span class="fa fa-search"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
     <h3>  {% trans from  'list' %} ours {% endtrans %} </h3>
     <hr>
     <div class="row">
         {% for i in 1..12 %}
-            <div class="col-sm-12 col-md-3 ">
-                <div class="card drink-item">
+            <div class="col-sm-12 col-md-3 text-center">
+                <div class="card drink-item text-center">
                     <img class="card-img-top" src="{{ asset('dist/category/vins.jpg') }}" alt="Card image cap">
                     <div class="card-block">
-                        <h4 class="card-title">{% trans from  'category' %} category.vins {% endtrans %} </h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn  button"> {% trans from  'list' %} more {% endtrans %} </a>
+                        <h5 class="card-title ">CHAMPAGNE MICHEL HOERTER</h5>
+                        <p class="card-text small">
+                            Champagne Brut Tradition - Michel Hoerter Assemblage Bulles
+                            AOC Champagne
+                        </p>
+                        <p class="card-text text-danger">
+                            <strong> 15000F</strong>
+                        </p>
+                        <a href="#" class="btn  button"> <sapn class="fa fa-shopping-basket"></sapn> Ajouter au panier</a>
                     </div>
                 </div>
             </div>

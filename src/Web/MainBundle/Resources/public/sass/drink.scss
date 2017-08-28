@@ -1,4 +1,4 @@
-#MainListDrink{
+#DrinkList{
     h3{
       @extend  #title;
     }
@@ -6,8 +6,9 @@
     .drink-item{
       margin-top: 2% !important;
       img{
-        height: 150px;
+        height: 180px;
         max-width: 80%;
+        margin: 1em 2em 0 2em;
       }
     }
 }
