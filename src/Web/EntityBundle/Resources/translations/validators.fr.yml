@@ -1,0 +1,69 @@
+client:
+  name:
+    NotBlank: Le nom est requis.
+  lastname:
+    NotBlank: Le prenom est requis.
+country:
+  name:
+    NotBlank: Veuillez saisir un nom de pays.
+    UniqueEntity: Ce nom est deja utilisé.
+drink:
+  name:
+      NotBlank: Le nom est requis.
+      UniqueEntity: Ce nom est deja utilisé.
+  color:
+      NotBlank: Une couleur est requise.
+enterprise:
+  lastname:
+    NotBlank: Champ requis.
+      description:
+    NotBlank: Veuillez decrire votre entreprise.
+history:
+  price:
+    NotBlank: Le prix est requis
+  createDate:
+    NotBlank: La date de mise en bouteille(Millesime).
+  isAvailable:
+    NotBlank: Champ requis.
+user:
+  name:
+    NotBlank: Le nom est requis
+  phoneNumber:
+    NotBlank: Entrez un numero de telephone.
+  email:
+    NotBlank: l'Email est requise.
+  adress:
+    NotBlank: l'Adresse est requise.
+  city:
+    NotBlank: Ce champ est requis.
+command:
+  number:
+    NotBlank: Le numero de commande est requis.
+  commandDate:
+    NotBlank: La date est requise.
+  amount:
+    NotBlank: Le montant est requis.
+  state:
+    NotBlank: L'Etat de la commande est requis.
+category:
+  name:
+    NotBlank: Un nom est requis.
+  description:
+    NotBlank: La description de la categorie est requise.
+  photo:
+    NotBlank: Entrez une image pour cette categorie.
+basket:
+  quantity:
+    NotBlank: La quantite est requise.
+  price:
+    NotBlank: Le prix est requis.
+user:
+  phoneNumber:
+    NotBlank: Le numero de telephone est requis.
+  password:
+    NotBlank: Le mot de passe est requis.
+save:
+  createDate:
+    NotBlank: La date est requise.
+
+

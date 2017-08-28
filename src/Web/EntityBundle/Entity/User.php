@@ -37,21 +37,21 @@ abstract class User  extends  BaseUser
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255, nullable=true, unique=true)
+     * @Assert\NotBlank(message="user.name.NotBlank")
+     * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
 
     /**
      * @var array
-     *
-     * @ORM\Column(name="phoneNumber", type="array", nullable=true)
+     * @Assert\NotBlank(message="user.phoneNumber.NotBlank")
+     * @ORM\Column(name="phoneNumber", type="array")
      */
     private $phoneNumber;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="user.adress.NotBlank")
      * @ORM\Column(name="adress", type="string", length=255)
      */
     private $adress;
@@ -65,7 +65,7 @@ abstract class User  extends  BaseUser
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="user.city.NotBlank")
      * @ORM\Column(name="city", type="string", length=255)
      */
     private $city;

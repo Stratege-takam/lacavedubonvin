@@ -3,6 +3,8 @@
 namespace Web\EntityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Client
@@ -23,14 +25,14 @@ class Client extends User
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="client.name.NotBlank")
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="client.lastname.NotBlank")
      * @ORM\Column(name="lastname", type="string", length=255)
      */
     private $lastname;

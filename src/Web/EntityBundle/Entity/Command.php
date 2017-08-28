@@ -3,6 +3,8 @@
 namespace Web\EntityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Command
@@ -38,28 +40,28 @@ class Command
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="command.number.NotBlank")
      * @ORM\Column(name="number", type="string", length=255)
      */
     private $number;
 
     /**
      * @var \DateTime
-     *
+     * @Assert\NotBlank(message="command.commandDate.NotBlank")
      * @ORM\Column(name="commandDate", type="datetime")
      */
     private $commandDate;
 
     /**
      * @var float
-     *
+     * @Assert\NotBlank(message="command.amount.NotBlank")
      * @ORM\Column(name="amount", type="float")
      */
     private $amount;
 
     /**
      * @var bool
-     *
+     * @Assert\NotBlank(message="command.state.NotBlank")
      * @ORM\Column(name="state", type="boolean")
      */
     private $state;

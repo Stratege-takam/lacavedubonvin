@@ -3,6 +3,8 @@
 namespace Web\EntityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Save
@@ -37,12 +39,9 @@ class Save
     protected $enterprise;
 
 
-
-
-
     /**
      * @var \DateTime
-     *
+     * @Assert\NotBlank(message="save.createDate.NotBlank")
      * @ORM\Column(name="createDate", type="datetime")
      */
     private $createDate;

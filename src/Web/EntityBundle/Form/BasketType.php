@@ -2,6 +2,7 @@
 
 namespace Web\EntityBundle\Form;
 
+use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -13,7 +14,9 @@ class BasketType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('quantity')->add('price');
+        //$builder->add('quantity')->add('price');
+        $builder->add('command',CommandType::class)
+                ->add('drink',DrinkType::class);
     }
     
     /**

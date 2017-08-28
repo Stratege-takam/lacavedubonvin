@@ -3,6 +3,8 @@
 namespace Web\EntityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Country
@@ -23,7 +25,7 @@ class Country
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="country.name.NotBlank")
      * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;
@@ -38,7 +40,7 @@ class Country
     /**
      * @var string
      *
-     * @ORM\Column(name="photoHashname", type="text", nullable=true)
+     * @ORM\Column(name="photoHashname", type="text")
      */
     private $photoHashname;
 

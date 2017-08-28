@@ -13,7 +13,19 @@ class ClientType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('lastname');
+        $builder->add('name',TextType::class,array(
+            'label' => 'form.client.name',
+            'attr'=>['placeholder'=>'form.client.placeholder_clienName'],
+            'translation_domain' => 'forms',
+            'required'    => false
+        ))
+
+            ->add('lastname',TextType::class,array(
+                'label' => 'form.client.lastname',
+                'attr'=>['placeholder'=>'form.client.placeholder_clientLastname'],
+                'translation_domain' => 'forms',
+                'required'    => false
+            ));
     }
     
     /**

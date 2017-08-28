@@ -3,6 +3,8 @@
 namespace Web\EntityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * History
@@ -37,21 +39,21 @@ class History
 
     /**
      * @var \DateTime
-     *
+     * @Assert\NotBlank(message="history.createDate.NotBlank")
      * @ORM\Column(name="createDate", type="date")
      */
     private $createDate;
 
     /**
      * @var bool
-     *
+     * @Assert\NotBlank(message="history.isAvailable.NotBlank")
      * @ORM\Column(name="isAvailable", type="boolean")
      */
     private $isAvailable;
 
     /**
      * @var float
-     *
+     * @Assert\NotBlank(message="history.price.NotBlank")
      * @ORM\Column(name="price", type="float")
      */
     private $price;

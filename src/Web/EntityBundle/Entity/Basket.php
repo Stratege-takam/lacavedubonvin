@@ -3,6 +3,8 @@
 namespace Web\EntityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Basket
@@ -37,14 +39,14 @@ class Basket
 
     /**
      * @var int
-     *
+     * @Assert\NotBlank(message="basket.quantity.NotBlank")
      * @ORM\Column(name="quantity", type="integer")
      */
     private $quantity;
 
     /**
      * @var float
-     *
+     * @Assert\NotBlank(message="basket.price.NotBlank")
      * @ORM\Column(name="price", type="float")
      */
     private $price;

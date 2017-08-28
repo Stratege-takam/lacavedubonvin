@@ -1,0 +1,86 @@
+form:
+  client:
+    name: Nom
+    placeholder_clientName : Votre nom
+    lastname: Nom
+    placeholder_clientLastname : Votre prénom
+  country:
+    name: Pays de provenance
+    placeholder_countryName : Entrer un pays
+    photo: Photo
+    placeholder_photo: Télécharger une image,5MB maxi
+    description: Description
+    placeholder_countryDescription : Décrire la provenace de la boisson
+  drink:
+    country: Pays de provenance
+    empty_country: Sélectionner un pays
+    category: Catégorie
+    empty_category: Sélectionner une categorie de boisson
+    photos: Photo
+    placeholder_photo: Télécharger des images
+    name: Nom
+    placeholder_drinkName : Nom de la boisson
+    color: Couleur
+    placeholder_color : Couleur du vin
+    size: Contenance
+    placeholder_size : Contenance de la bouteille en cl
+    compter : Compteur commande
+  enterprise:
+    chiffreAffaire: Capital
+    placeholder_chiffreAffaire : Capital de l'entreprise
+    lastname: Initiales
+    placeholder_enterpriseLastname : Initiales de l'entreprise
+    website: Site web
+    placeholder_website : Site de l'entreprise
+    taxpayNumber: Num contribuable
+    placeholder_taxpayNumber : numéro de contribuable
+    description: Description
+    placeholder_enterpriseDescription : Décrire l'entreprise
+    banner: Bannière
+    placeholder_banner : Bannière de l'entreprise
+    logo: Logo
+    placeholder_logo : Logo de l'entreprise
+  history:
+    drink: Boisson commandée
+    enterprise: Entreprise vendeuse
+    createDate: Millésime
+    isAvailable: Disponibilité
+    price: Prix
+  user:
+    email: Adresse email
+    placeholder_email: Votre addresse email
+    name: Nom
+    placeholder_username: Votre nom
+    lastname: Prénom
+    placeholder_userlastname: Votre prénom
+    phoneNumber: Téléphone
+    placeholder_phoneNumber: Votre numéro de téléphone
+    adress: Adresse
+    placeholder_userAdress: Votre adresse
+    region: Région
+    placeholder_userRegion: Votre région
+    city: Ville
+    placeholder_userCity: Votre ville
+  command:
+    client: Informations du client
+    enterprise: Informations du vendeur
+    number: Numéro de commande
+    commandDate: Date de la commande
+    amount: Montant
+    state: Etat
+  category:
+    name: Nom
+    placeholder_categoryName: Nom de la catégorie
+    description: Description
+    placeholder_CategoryDescription: Décrire la catégorie
+    photo: Photo
+    placeholder_categoryPhoto: Sélectionner une image, 5MB maxi
+  basket:
+    command: Commande
+    drink: Boisson
+    quantity: Quantité
+    price: Prix
+  save:
+    client: Client
+    enterprise: Vendeur
+    createDate: Date

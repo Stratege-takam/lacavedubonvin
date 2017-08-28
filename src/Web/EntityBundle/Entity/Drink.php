@@ -4,6 +4,8 @@ namespace Web\EntityBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints\Count;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Drink
@@ -46,14 +48,14 @@ class Drink
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank(message="drink.name.NotBlank")
+     * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="drink.color.NotBlank")
      * @ORM\Column(name="color", type="string", length=255)
      */
     private $color;
