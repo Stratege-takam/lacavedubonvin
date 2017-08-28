@@ -1,0 +1,18 @@
+<div id="DrinkList">
+    <h3>  {% trans from  'list' %} ours {% endtrans %} </h3>
+    <hr>
+    <div class="row">
+        {% for i in 1..12 %}
+            <div class="col-sm-12 col-md-3 ">
+                <div class="card drink-item">
+                    <img class="card-img-top" src="{{ asset('dist/category/vins.jpg') }}" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">{% trans from  'category' %} category.vins {% endtrans %} </h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn  button"> {% trans from  'list' %} more {% endtrans %} </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

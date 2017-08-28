@@ -1,0 +1,33 @@
+{% extends 'MainBundle::layout.html.twig' %}
+
+{% block meta %}
+    <meta name = "{% trans from 'index' %} refer.title {% endtrans %}" >
+    <meta name = "keywords" content = "{% trans from 'index' %} refer.description {% endtrans %}" >
+{% endblock %}
+
+{% block title %}
+    {% trans from 'index' %} title {% endtrans %}
+{% endblock  %}
+
+{% block mycss %}
+    {{ parent() }}
+    {# mettre le css si la page t'oublige #}
+{% endblock %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+{% block main %}
+    <div class="row" id="MainListDrink" data-page="MainListDrink" >
+        {{ render(controller('MainBundle:Render:list')) }}
+    </div>
+{% endblock %}
+
+
+{% block footer %}
+
+{% endblock %}
+{% block myjs %}
+    {# mettre des liens vers des pages externe js si c'est  necessaire #}
+{% endblock %}
+

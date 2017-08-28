@@ -1,0 +1,13 @@
+#MainListDrink{
+    h3{
+      @extend  #title;
+    }
+    margin-top: 3em;
+    .drink-item{
+      margin-top: 2% !important;
+      img{
+        height: 150px;
+        max-width: 80%;
+      }
+    }
+}
